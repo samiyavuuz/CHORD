@@ -1,0 +1,10 @@
+pool,condition,mix,rho,alpha,direction,rep,diagnosis,n_selected
+CPTAC-dev,with HNSCC,gbm,0.9,1.0,random,0,HNSCC,20
+CPTAC-dev,with HNSCC,gbm,0.9,1.0,random,1,HNSCC,20
+CPTAC-dev,with HNSCC,gbm,0.9,1.0,random,2,HNSCC,20
+CPTAC-dev,with HNSCC,gbm,0.9,1.0,random,3,HNSCC,20
+CPTAC-dev,with HNSCC,gbm,0.9,1.0,random,4,HNSCC,20
+CPTAC-dev,with HNSCC,gbm,0.9,1.0,random,5,HNSCC,20
+CPTAC-dev,with HNSCC,gbm,0.9,1.0,random,7,HNSCC,20
+CPTAC-dev,with HNSCC,gbm,0.9,1.0,random,8,HNSCC,20
+CPTAC-dev,with HNSCC,gbm,0.9,1.0,random,9,HNSCC,20

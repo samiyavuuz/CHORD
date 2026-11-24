@@ -1,0 +1,35 @@
+[project]
+name = "chord"
+version = "0.1.0"
+description = "CHORD: Class-Aware Cohort Alignment for Out-of-Distribution Detection in Digital Pathology"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Muhammet Sami Yavuz" },
+    { name = "Sabri Mustafa Kahya" },
+    { name = "Richard R. Chen" },
+    { name = "Anke Meyer-Baese" },
+    { name = "Jana Lipkova" },
+    { name = "Benedikt Wiestler" },
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.5.4",
+    "pandas>=3.1.0",
+    "scikit-learn>=1.9.1",
+    "scipy>=1.18.1",
+]
+
+[project.urls]
+Repository = "https://github.com/samiyavuuz/CHORD"
+
+[build-system]
+requires = ["uv_build>=0.9.5,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint.isort]
+known-first-party = ["chord"]
+known-local-folder = ["run_detectors", "run_mean_of_ten"]

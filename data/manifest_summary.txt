@@ -1,0 +1,103 @@
+== Role counts per cohort
+role     excluded   far    id  near    All
+cohort                                    
+CPTAC        1653  1877  1835   228   5593
+EBRAINS        46  2034   333   361   2774
+PLCO           38  2102   889   115   3144
+TCGA          227  2792  1912   725   5656
+All          1964  8805  4969  1429  17167
+
+== ID class counts (slides / patients)
+id_class  slides_c0  slides_c1  slides_c2  patients_c0  patients_c1  patients_c2
+cohort                                                                          
+CPTAC           698        684        453          232          209          181
+EBRAINS           0          0        333            0            0          333
+PLCO            552        337          0          175          108            0
+TCGA            540        512        860          478          478          389
+
+== Patients per role
+role     excluded   far    id  near
+cohort                             
+CPTAC         936   761   622   102
+EBRAINS        46  2034   333   361
+PLCO            1   881   283    38
+TCGA          208  2653  1345   636
+
+== Exclusions by reason
+exclude_reason                     duplicate_embedding  frozen_section  ihc_control_slide  no_metadata  normal_tissue  possible_lung_metastasis  sample_type_02  unknown_specimen_type
+cohort  source_subset                                                                                                                                                                 
+CPTAC   CPTAC/BRCA                                   4               0                  0            0              0                         0               0                      0
+        CPTAC/GBM                                    0              42                  0            0             29                         0               0                      2
+        CPTAC/HNSCC                                  0              49                  0            0            112                         0               0                      0
+        CPTAC/LSCC                                   0              15                  0            0            381                         0               0                      0
+        CPTAC/LUAD                                   0              47                  0            2            390                         0               0                      0
+        CPTAC/PDA                                    0              47                  0            0            159                         0               0                      0
+        CPTAC/UCEC                                   0             142                  0            0            232                         0               0                      0
+EBRAINS EBRAINS-EXTENDED-NEW/REST                    0               0                  0            0              0                        46               0                      0
+PLCO    PLCO/IHC                                     0               0                 38            0              0                         0               0                      0
+TCGA    TCGA/LGG                                     0             219                  0            0              0                         0               0                      0
+        TCGA/LUAD                                    0               0                  0            0              0                         0               1                      0
+        TCGA/PAAD                                    1               0                  0            0              6                         0               0                      0
+
+== Near-OOD diagnoses
+cohort   diagnosis                                               
+CPTAC    HNSCC                                                       228
+EBRAINS  Anaplastic_astrocytoma_IDH_mutant                            46
+         Anaplastic_astrocytoma_IDH_wildtype                          47
+         Anaplastic_oligodendroglioma_IDH-mutant_1p-19q_codeleted     90
+         Diffuse_astrocytoma_IDH-mutant                               69
+         Diffuse_astrocytoma_IDH-wildtype                             19
+         Gemistocytic_astrocytoma_IDH-mutant                           5
+         Oligodendroglioma_IDH-mutant_and_1p-19q_codeleted            85
+PLCO     Clear Cell Carcinoma                                          6
+         Intermediate Cell Carcinoma                                   3
+         Large Cell Carcinoma                                         54
+         Neuroendocrine                                               23
+         Small Cell Carcinoma                                         26
+         Spindle Cell Carcinoma                                        3
+TCGA     HNSC                                                        472
+         LGG                                                         253
+
+== EBRAINS ID (GBM) subtypes
+diagnosis
+Glioblastoma_IDH-wildtype    249
+Gliosarcoma                   47
+Giant_cell_glioblastoma       20
+Glioblastoma_IDH-mutant       17
+
+== Medium / specimen type of ID rows
+specimen_type    tumor  unknown
+cohort  medium                 
+CPTAC   FFPE      1835        0
+EBRAINS unknown      0      333
+PLCO    unknown      0      889
+TCGA    FFPE      1912        0
+
+== Duplicated slide ids (within cohort)
+cohort   status   
+EBRAINS  identical    10
+
+== EBRAINS folder consistency
+  GBM: group-level 333 unique, subfolders 333 unique, only-in-group 0, only-in-subfolders 0
+  LGG: group-level 361 unique, subfolders 361 unique, only-in-group 0, only-in-subfolders 0
+  ID: group-level 652 unique, subfolders 652 unique, only-in-group 0, only-in-subfolders 0
+  REST: group-level 1428 unique, subfolders 1428 unique, only-in-group 0, only-in-subfolders 0
+  ALL: 2774 unique vs union of groups 2774; only-in-ALL 0, only-in-groups 0
+
+== PLCO patient-id check
+  slides with known plco_id: 115; TI ids mapping to >1 plco_id: 0; plco_ids mapping to >1 TI: 0
+
+== Identical embeddings across slide ids
+  excluded as duplicate_embedding: 5
+    [('CPTAC', '05BR022-2014fb6b-fcf9-4ccc-8c8b-c90b83', 'far', 'BRCA'), ('CPTAC', '05BR022-f490e21d-b697-49e7-b3bd-04934e_3', 'excluded', 'BRCA')]
+    [('TCGA', 'TCGA-HZ-8315-01Z-00-DX1.F6B3F80E-3630-426E-AB2C-7F2EC5B63BFC', 'far', 'PAAD'), ('TCGA', 'TCGA-HZ-8315-01Z-00-DX2.67A21E7E-128C-4F44-BA29-59CBC3108316', 'excluded', 'PAAD')]
+    [('CPTAC', '15BR001-112eb583-f520-4e46-93c7-a87936_D1_D1_3', 'far', 'BRCA'), ('CPTAC', '15BR001-cacaf9e1-b031-4ff0-8ad3-161d5c', 'excluded', 'BRCA')]
+    [('CPTAC', '05BR029-afd16022-38d1-4e61-8519-80e355_3', 'far', 'BRCA'), ('CPTAC', '05BR029-d0ce3c06-9c4c-41bd-b583-9254b0', 'excluded', 'BRCA')]
+    [('CPTAC', '03BR012-2d8514b6-c01a-4166-a0c1-bc7012', 'far', 'BRCA'), ('CPTAC', '03BR012-2d8514b6-c01a-4166-a0c1-bc7012_3', 'excluded', 'BRCA')]
+  identical embeddings remaining among non-excluded slides (any cohort): 0
+
+== Patients with more than one diagnosis
+  CPTAC: 0 patients with >1 diagnosis
+  EBRAINS: 0 patients with >1 diagnosis
+  PLCO: 35 patients with >1 diagnosis; {'BRCA+IHC': 35}
+  TCGA: 0 patients with >1 diagnosis

@@ -1,0 +1,13 @@
+cohort,class,present,candidates,selected,purity,sel_near,sel_far
+CPTAC-test,0,True,152,20,1.0,0,0
+CPTAC-test,1,True,230,23,0.9565217391304348,0,0
+CPTAC-test,2,True,84,20,1.0,0,0
+TCGA,0,True,543,55,0.8727272727272727,0,0
+TCGA,1,True,719,72,1.0,0,0
+TCGA,2,True,1095,110,1.0,0,0
+PLCO,0,True,456,46,0.9347826086956522,0,0
+PLCO,1,True,372,38,1.0,0,0
+PLCO,2,False,0,0,,0,0
+EBRAINS,0,False,0,0,,0,0
+EBRAINS,1,False,10,0,,0,0
+EBRAINS,2,True,1071,108,0.9629629629629629,2,2

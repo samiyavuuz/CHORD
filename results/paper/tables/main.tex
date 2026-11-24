@@ -1,0 +1,30 @@
+\begin{tabular}{llcccccccccccc}
+\toprule
+Detector & Correction & \multicolumn{4}{c}{TCGA} & \multicolumn{4}{c}{PLCO} & \multicolumn{4}{c}{EBRAINS} \\
+\cmidrule(lr){3-6}\cmidrule(lr){7-10}\cmidrule(lr){11-14}
+ & & \multicolumn{2}{c}{Near} & \multicolumn{2}{c}{Far} & \multicolumn{2}{c}{Near} & \multicolumn{2}{c}{Far} & \multicolumn{2}{c}{Near} & \multicolumn{2}{c}{Far} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}\cmidrule(lr){9-10}\cmidrule(lr){11-12}\cmidrule(lr){13-14}
+ & & AUROC$\uparrow$ & FPR95$\downarrow$ & AUROC$\uparrow$ & FPR95$\downarrow$ & AUROC$\uparrow$ & FPR95$\downarrow$ & AUROC$\uparrow$ & FPR95$\downarrow$ & AUROC$\uparrow$ & FPR95$\downarrow$ & AUROC$\uparrow$ & FPR95$\downarrow$ \\
+\midrule
+kNN & No correction & 0.921 & \textbf{0.312} & \textbf{0.996} & 0.002 & \textbf{0.672} & 0.800 & \textbf{0.999} & 0.006 & 0.929 & 0.299 & 0.975 & 0.111 \\
+ & Centering & 0.841 & 0.677 & 0.984 & 0.069 & 0.646 & 0.800 & 0.992 & 0.047 & 0.906 & 0.454 & 0.767 & 0.741 \\
+ & CORAL & 0.799 & 0.772 & 0.930 & 0.479 & 0.644 & 0.809 & 0.879 & 0.660 & 0.727 & 0.759 & 0.682 & 0.757 \\
+ & MNN shift & \textbf{0.923} & 0.383 & \textbf{0.996} & \textbf{0.001} & 0.655 & 0.800 & \textbf{0.999} & 0.007 & 0.944 & \textbf{0.224} & 0.968 & 0.155 \\
+ & \textbf{CHORD (ours)} & \textbf{0.923} & 0.353 & \textbf{0.996} & 0.002 & 0.667 & \textbf{0.791} & \textbf{0.999$^{*}$} & \textbf{0.003$^{*}$} & \textbf{0.949$^{*}$} & 0.235$^{*}$ & \textbf{0.985$^{*}$} & \textbf{0.075$^{*}$} \\
+ & \textit{Label-informed$^\dagger$} & \textit{0.915} & \textit{0.410} & \textit{0.996} & \textit{0.001} & \textit{0.674} & \textit{0.800} & \textit{1.000} & \textit{0.002} & \textit{0.935} & \textit{0.360} & \textit{0.984} & \textit{0.092} \\
+\midrule
+CARef & No correction & 0.926 & \textbf{0.280} & \textbf{0.995} & \textbf{0.001} & 0.779 & 0.783 & 0.997 & 0.009 & 0.932 & \textbf{0.241} & 0.978 & \textbf{0.082} \\
+ & Centering & 0.883 & 0.552 & 0.986 & 0.027 & 0.781 & \textbf{0.739} & 0.989 & 0.056 & 0.696 & 0.765 & 0.525 & 0.856 \\
+ & CORAL & 0.808 & 0.782 & 0.921 & 0.517 & 0.767 & 0.757 & 0.815 & 0.798 & 0.522 & 0.936 & 0.555 & 0.865 \\
+ & MNN shift & \textbf{0.934} & 0.295 & \textbf{0.995} & 0.002 & \textbf{0.791} & \textbf{0.739} & 0.995 & 0.026 & 0.930 & 0.271 & 0.958 & 0.204 \\
+ & \textbf{CHORD (ours)} & 0.930$^{*}$ & \textbf{0.280} & \textbf{0.995} & \textbf{0.001} & 0.790$^{*}$ & 0.774 & \textbf{0.999$^{*}$} & \textbf{0.002$^{*}$} & \textbf{0.941$^{*}$} & 0.258 & \textbf{0.981$^{*}$} & 0.084 \\
+ & \textit{Label-informed$^\dagger$} & \textit{0.932} & \textit{0.294} & \textit{0.995} & \textit{0.002} & \textit{0.835} & \textit{0.713} & \textit{1.000} & \textit{0.000} & \textit{0.951} & \textit{0.238} & \textit{0.985} & \textit{0.070} \\
+\midrule
+Mean of ten & No correction & 0.843 & 0.663 & 0.986 & 0.079 & 0.738 & 0.818 & 0.969 & 0.188 & 0.857 & 0.425 & 0.948 & 0.179 \\
+ & Centering & 0.713 & 0.727 & 0.966 & 0.163 & 0.740 & \textbf{0.798} & 0.960 & 0.251 & 0.626 & 0.818 & 0.512 & 0.854 \\
+ & CORAL & 0.732 & 0.797 & 0.930 & 0.378 & 0.725 & 0.834 & 0.856 & 0.745 & 0.591 & 0.910 & 0.581 & 0.866 \\
+ & MNN shift & \textbf{0.847} & \textbf{0.659} & \textbf{0.988} & \textbf{0.054} & 0.749 & 0.808 & 0.959 & 0.260 & 0.863 & 0.447 & 0.921 & 0.314 \\
+ & \textbf{CHORD (ours)} & 0.846$^{*}$ & 0.664 & 0.987$^{*}$ & 0.068$^{*}$ & \textbf{0.754$^{*}$} & 0.803 & \textbf{0.978$^{*}$} & \textbf{0.146$^{*}$} & \textbf{0.899$^{*}$} & \textbf{0.385$^{*}$} & \textbf{0.970$^{*}$} & \textbf{0.134$^{*}$} \\
+ & \textit{Label-informed$^\dagger$} & \textit{0.853} & \textit{0.646} & \textit{0.988} & \textit{0.051} & \textit{0.787} & \textit{0.756} & \textit{0.983} & \textit{0.128} & \textit{0.902} & \textit{0.373} & \textit{0.972} & \textit{0.128} \\
+\bottomrule
+\end{tabular}

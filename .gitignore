@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# CHORD: run_all.sh logs and the paper source (not distributed)
+logs/
+/paper/

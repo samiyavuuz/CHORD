@@ -1,0 +1,19 @@
+\begin{tabular}{lcccccc}
+\toprule
+Variant & \multicolumn{2}{c}{TCGA} & \multicolumn{2}{c}{PLCO} & \multicolumn{2}{c}{EBRAINS} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & Near & Far & Near & Far & Near & Far \\
+\midrule
+No correction & 0.843 & 0.986 & 0.738 & 0.969 & 0.857 & 0.948 \\
+\textbf{CHORD} & 0.846 & 0.987 & 0.754 & 0.978 & 0.899 & 0.970 \\
+\midrule
+w/o strict selection ($r=1$) & 0.825 & 0.987 & 0.751 & 0.980 & 0.851 & 0.958 \\
+Random ranking & 0.824 & 0.987 & 0.750 & 0.980 & 0.853 & 0.958 \\
+w/o similarity gate & 0.856 & 0.987 & 0.753 & 0.944 & 0.891 & 0.964 \\
+w/o count threshold & 0.846 & 0.987 & 0.754 & 0.978 & 0.897 & 0.968 \\
+\midrule
+Source class means & 0.864 & 0.987 & 0.785 & 0.982 & 0.891 & 0.966 \\
+Organ-wise shifts & 0.857 & 0.988 & 0.754 & 0.978 & 0.899 & 0.970 \\
+Second pass & 0.846 & 0.987 & 0.761 & 0.979 & 0.903 & 0.971 \\
+\bottomrule
+\end{tabular}
